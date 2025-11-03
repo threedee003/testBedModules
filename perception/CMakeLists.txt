@@ -37,3 +37,16 @@ target_link_libraries(pcl
   ${PCL_LIBRARIES}
   ${OpenCV_LIBRARIES}
 )
+
+
+
+
+add_executable(cuboid src/voxelise.cpp)
+target_link_libraries(cuboid
+  ${catkin_LIBRARIES}
+  ${PCL_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+)
+
+
+
