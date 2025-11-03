@@ -12,9 +12,7 @@
 
 using namespace std;
 
-/*
-Real-time voxel visualization from RGBD camera stream
-*/
+
 
 class Voxelise {
 
@@ -69,7 +67,7 @@ public:
             depth_image = cv_bridge::toCvShare(msg, sensor_msgs::image_encodings::TYPE_16UC1)->image;
             depth_image.convertTo(depth_m, CV_32F, 0.001); // mm -> meters
 
-            if (rgb_image_.empty()) return; // wait until RGB is available
+            if (rgb_image_.empty()) return; 
 
             int rows = depth_m.rows;
             int cols = depth_m.cols;
